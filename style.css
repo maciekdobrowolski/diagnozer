@@ -1,0 +1,78 @@
+body{
+    background: url(ignasi_pattern_s.png);
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.bg-bootstrap{
+    background-color: #7952b3;;
+}
+
+.text-bootstrap{
+    color: #7952b3
+}
+
+.border-bs-color{
+    border-color: #7952b3;
+}
+
+.btn-check:active+.btn-outline-primary, .btn-check:checked+.btn-outline-primary, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:active {
+    color: #fff;
+    background-color: #7952b3;
+    border-color: #7952b3;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.questions{
+    min-height: 160px;
+}
+
+.symptoms_aded{
+    min-height: 180px;
+}
+
+.analiza{
+    min-height: 220px;
+}
+
+.suggests{
+    min-height: 150px;
+}
+
+.huge_list{
+    border: 2px solid #dc3545;
+    border-radius: 4px;
+    border-top: none;
+}
+
+.alarm{
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+.warning-alarm{
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+}
+
+.width{
+    width: 100%;
+}
+
+.min-content{
+    width: min-content;
+}
+
+.display-n{
+    display: none;
+}
+
+.inline{
+    display: inline-block;
+}

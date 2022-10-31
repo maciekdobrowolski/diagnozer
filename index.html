@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Diagnozer- AI</title>
+
+    <meta name="description" content="Aplikacja pozwalająca na zdiagnozowanie chorób. Narzędzie pomagające personelowi opieki medycznej.">
+    <meta name="keywords" content="diagnozowanie chorób, aplikacja, narzędzie diagnostyczne, choroby, diganostyka, pomoc lekarzowi">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="logo.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,300;1,500&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar bg-bootstrap text-light">
+            <div class="container">
+                <div class="navbar-brand fs-1">
+                    <span class="fw-bolder text-uppercase">Diagnozer</span> <span class="fw-normal fst-italic">POWERED BY AI</span>
+                    <img src="logo.png" alt="" width="60" height="60" class="d-none d-md-inline-block align-text-top">
+                </div>
+
+                <button class="text-light bg-bootstrap border-0 fw-bolder" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="container pt-5 mt-5 menue">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <button type="button" class="btn btn-success btn-lg fw-bold" style="width: 100%;" id="start">+ New case</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="form-check mt-4 pointer">
+                        <input class="form-check-input pointer" type="checkbox" id="flexCheckDefault">
+                        <label class="form-check-label text-center text-muted fw-light fs-6 pointer" for="flexCheckDefault">
+                            I have read, understood and I accept and agree to comply with the Terms of Use of this website.
+                            The Terms of Use are available on <a href="https://medyczneprzypadki.pl/regulaminDIAGNOZERA" class="text-muted text-decoration-none">medyczneprzypadki.pl</a>.
+                        </label>
+                    </div>
+                    <div class="text-center text-muted fs-6 fw-light mt-4">
+                        <p class="fs-6">Powered by EndlessMedical, EndlessMedicalAPI.</p>
+                        <p class="fs-5 text-primary fw-bold"><a href="https://www.facebook.com/Medyczneprzypadkipl-108905600954011" target="_blank" class="text-decoration-none">Facebook</a></p>
+                        <p class="fs-6">Contact to developer: maciek@medyczneprzypadki.pl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="mt-2 display-n">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 mb-3">
+                    <div class="bg-primary fw-normal fs-4 text-center text-light rounded-top pt-2 pb-2">Basic Info</div>
+                    <div class="bg-light border border-primary rounded-bottom">
+
+                        <div class="mt-3 mb-3 d-flex justify-content-center">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                                    <label class="btn btn-outline-primary border-bs-color text-bootstrap" for="btnradio1">Female</label>
+                                    
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                    <label class="btn btn-outline-primary border-bs-color text-bootstrap" for="btnradio3">Male</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Age</span>
+                            <input type="number" class="form-control basicInfo" min="18" max="120" name="Age" placeholder="?">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">BMI</span>
+                            <input type="number" class="form-control basicInfo" min="11" max="60" name="BMI" placeholder="?">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">&#176;C</span>
+                            <input type="number" class="form-control basicInfo" name="Temp" placeholder="temperature" min="30" max="42">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Pulse</span>
+                            <input type="number" class="form-control basicInfo" name="HeartRate" min="0" placeholder="pulse" max="220">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">SBP</span>
+                            <input type="number" class="form-control basicInfo" name="SBP" min="0" placeholder="Systolic BP" max="300">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">DBP</span>
+                            <input type="number" class="form-control basicInfo" min="0" name="DBP" placeholder="Diastolic BP" max="180">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Sa</span>
+                            <input type="number" class="form-control basicInfo" min="0" name="O2Sats" placeholder="Saturation %" max="100">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <div class="symptoms">
+                        <div class="bg-danger fw-normal fs-4 text-center text-light rounded-top pt-2 pb-2">Add Symptoms</div>
+                        <div class="bg-light border border-danger rounded-bottom">
+                            <div>
+                                <input type="search" class="form-control" placeholder="Search... in English     symptoms, blood works, examinations" aria-label="Search" data-dashlane-rid="422272a92bcf3b9b" data-form-type="" id="searchSymptom">
+                            </div>
+                            <div class="huge_list list-group">
+                                
+                            </div>
+                            <div class="symptoms_aded">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions mt-3">
+                        <div class="bg-success fw-normal fs-5 text-center text-light rounded-top pt-1 pb-1">Answer questions</div>
+                        <div class="bg-light border border-success rounded-bottom questions question" id="questionArea">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 mb-3">
+                    <div class="analiza">
+                        <div class="bg-bootstrap fw-normal fs-4 text-center text-light rounded-top pt-2 pb-2">Analysis results</div>
+                        <div class="bg-light border border-primary rounded-bottom">
+                            <div class="analiza analizatorScreen">
+                                <div class="d-flex justify-content-center">
+                                    <div class="spinner-border text-bootstrap mt-5" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sugestie mt-3">
+                        <div class="bg-info fw-normal fs-5 text-center text-light rounded-top pt-1 pb-1">Suggestions</div>
+                        <div class="bg-light border border-info rounded-bottom suggests">
+                            <p class="text-muted m-2">I want more information to be a good helper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <article>
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header bg-bootstrap text-light">
+                    <img src="logo.png" class="rounded me-2 img-fluid" width="40" height="40" alt="logo">
+                    <strong class="me-auto">How could You use my medical brain?</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    <p class="text-muted m-1">I'm not good pediatrics. Diagnozer is only for adults.</p>
+                    <p class="text-muted m-1">I'll analize your case, but give me more info.</p>
+                    <p class="text-muted m-1"><span class="fw-bolder text-danger">First-></span> add symptom, blood work and examination results.</p>
+                    <p class="text-muted m-1"><span class="fw-bolder text-danger">Second-></span> answer question.</p>
+                    <p class="text-muted m-1">Then-> add other symptom...</p>
+                    <p class="text-muted m-1">Let me think <span class="text-warning"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-fill" viewBox="0 0 16 16">
+                        <path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/>
+                        </svg></span></p>
+                    <p class="text-muted m-2">Then-> <span class="fw-bolder text-success">answer my questions</span></p>
+                    <p class="text-muted m-2">Then-> add new symptoms...</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Refresh session</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Do You want to refresh this site? I will forget this patient.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="refresh">Next case</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="logic.js"></script>
+</body>
+
+</html>
